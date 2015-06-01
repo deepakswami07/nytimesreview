@@ -10,12 +10,54 @@
     <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans|Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/application.css">
 </head>
 
 <body>
-    <header>
-        <h1>Find a Review</h1>
-    </hea
+     <!-- navbar begin -->
+    <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
+        <ul class="nav nav-pills pull-right">
+            <li><a data-toggle="modal" href="#signup"><span class="glyphicon glyphicon-user"></span> SIGN UP</a>
+            </li>
+            <li><a data-toggle="modal" href="#login">LOG IN</a>
+            </li>
+        </ul>
+        <!-- <div  class="navbar navbar-inverse navbar-fixed"> -->
+
+        <div class="container full masthead pull-left">
+            <div class="row-fluid">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav navbar-left">
+                        <li><a id="home" href="#" class="selected">HOME</a>
+                        </li>
+                        <li><a id="search" href="#" class="selected">SEARCH</a>
+                        </li>
+                        <li><a id="userID" href="#" class="selected">USERID</a>
+                        </li>
+                        <li><a id="favorites" href="#" class="selected">USER FAVORITES</a>
+                        </li>
+                        </li>
+                        <li><a data-toggle="modal" href="#contact" class="selected">CONTACT</a>
+                        </li>
+                        <li><a id="about" href="#" class="selected">ABOUT</a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  navbar end    -->
 
     <nav>
         <ul>
