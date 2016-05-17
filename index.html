@@ -1,31 +1,32 @@
-<!DOCTYPE html>
-
+<!DOCTYPE HTML>
 <html lang="en">
+
 <head>
-    <title>NYTimes Film Review</title>
+    <!--[if IE]>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<![endif]-->
+   <title>NYTimes Film Review</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description" content="With one click find the NYTimes film review of the latest films released">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+
+    <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans|Lato:300,400' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.css">
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/application.css">
+    <link rel="stylesheet" href="css/demo.css">
 </head>
 
 <body>
-     <!-- navbar begin -->
+    <!-- navbar begin -->
     <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
         <ul class="nav nav-pills pull-right">
-            <li><a data-toggle="modal" href="#signup"><span class="glyphicon glyphicon-user"></span> SIGN UP</a>
-            </li>
-            <li><a data-toggle="modal" href="#login">LOG IN</a>
-            </li>
+            
         </ul>
         <!-- <div  class="navbar navbar-inverse navbar-fixed"> -->
 
@@ -40,15 +41,17 @@
 
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a id="home" href="#" class="selected">Home</a>
+                        <li><a id="home" href="#" class="selected">HOME</a>
                         </li>
-                        <li><a id="home" href="#" class="selected">NYT Reviews</a>
+                        <li><a id="search" href="#" class="selected">NYT Reviews</a>
                         </li>
-                        <li><a id="home" href="#" class="selected">NYT Critics' Picks</a>
+                        <li><a id="userID" href="#" class="selected">NYT Critics' Picks</a>
                         </li>
-                        <li><a id="home" href="#" class="selected">NYT Reviewer</a>
+                        <li><a id="favorites" href="#" class="selected">NYT Reviewer</a>
                         </li>
-                        <li><a id="about" href="#" class="selected">About</a>
+                        </li>
+                        <li><a data-toggle="modal" href="#contact" class="selected">ABOUT</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -56,16 +59,31 @@
     </div>
     <!--  navbar end    -->
 
-    <section>
-        <h2></h2>
+   
+    <section id="toFill" class="container">
+        <h1 class="main-header">Films and Books Review</h1>
         <article>
-            <h2></h2>
-            <p></p>
+            <p id="d-home-main">Get your NYT film and book review with one click</p>
         </article>
     </section>
-    <script src="js/page.js"></script>
-    <footer>
-        <p>&copy; 2015 NYTimes Film Review All rights reserved.</p>
+
+    <div id="result"></div>
+    </br>
+    <div class="container" id="links"></div>
+    <br>
+
+    
+
+    <footer id="footer">
+        <p class="nav-center" style="text-align:center; color:#D6231E">&copy; 2015 flickrpics. All rights reserved.</p>
     </footer>
+    <!--  footer end -->
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/container.js" type="application/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
+
 </html>
