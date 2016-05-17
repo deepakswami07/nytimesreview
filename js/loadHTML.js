@@ -17,7 +17,7 @@ $searchHTML += '<section>';
 $searchHTML += '<h1 class="main-header">SEARCH</h1>';
 $searchHTML += '<h1 class="second-header-search">pics by topic</h1>';
 $searchHTML += '<article>';
-$searchHTML += '<p id="d-search">Type in a search term to find the most recent photos that have been posted on Flickr.</p>';
+$searchHTML += '<p id="d-search">Enter the name of the movie.</p>';
 $searchHTML += '</article>';
 $searchHTML += '</section>';
 
