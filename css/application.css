@@ -181,12 +181,12 @@ li>a,label {
     line-height:145%;
     text-align:center;
     color:#F2F2F2;
-    width:300px;
+    width:400px;
     font-size:1.0em;
     font-weight:100;
     margin:20px auto;
     padding:10px 0 6px;
-    letter-spacing:.2em;
+    letter-spacing:.49em;
     text-transform:lowercase;
     font-variant:small-caps
 }
@@ -196,12 +196,12 @@ li>a,label {
     line-height:145%;
     text-align:center;
     color:#F2F2F2;
-    width:300px;
+    width:400px;
     font-size:1.0em;
     font-weight:100;
     margin:20px auto;
     padding:10px 0 6px;
-    letter-spacing:.2em;
+    letter-spacing:.49em;
     text-transform:lowercase;
     font-variant:small-caps
 }
