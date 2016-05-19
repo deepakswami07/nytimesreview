@@ -1,3 +1,11 @@
+var $home = " ";
+$home += '<section id="toFill">';
+$home += '<article>';
+$home += '<h1 class="main-header">FILMS | BOOKS</h1>';
+$home += '<p id="d-home">NYT film and book reviews</p>';
+$home += '</article>';
+$home += '</section>';
+
 var $userSearchFilmsFormHTML = " ";
 $userSearchFilmsFormHTML += '<form class="navbar-form navbar-center form-inline" role="searchFriendsName">';
 $userSearchFilmsFormHTML += '<div class="form-group">';
@@ -14,14 +22,19 @@ $userSearchFilmsFormHTML += '</form>';
 
 var $searchHTML = " ";
 $searchHTML += '<section>';
-$searchHTML += '<h1 class="main-header">SEARCH</h1>';
-$searchHTML += '<h1 class="second-header-search">pics by topic</h1>';
+$searchHTML += '<h1 class="main-header">REVIEW</h1>';
+/* $searchHTML += '<h1 class="second-header-search">pics by topic</h1>';*/
 $searchHTML += '<article>';
-$searchHTML += '<p id="d-search">Enter the name of the movie.</p>';
+$searchHTML += '<p id="d-search">Enter movie name</p>';
 $searchHTML += '</article>';
 $searchHTML += '</section>';
 
 $("#search").click(function() {
-    document.getElementById("toFill").innerHTML = $searchHTML;
     document.getElementById("result").innerHTML = $userSearchFilmsFormHTML;
+    document.getElementById("toFill").innerHTML = $searchHTML;
 });
+
+$("#home").click(function() {
+    document.getElementById("toFill").innerHTML = $home;
+    /* document.getElementById("result").innerHTML = $picturesFormHTML;*/
+}); 
