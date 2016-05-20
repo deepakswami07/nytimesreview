@@ -1,94 +1,66 @@
-var pictures = function() {
-        $('form').submit(function(event) {
-            event.preventDefault();
-            var apiKey = '9cced63c6fde5aa51d72ec61a881f5e3:19:71855090';
-            var $searchField = $("#search");
-            var url = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json';
-            $.ajax({
-                url: 'https://api.nytimes.com/svc/movies/v2/reviews/search.json',
-                data: {
-                    format: 'json',
-                    method: 'GET',
-                    api_key: '9a204c1e5292bcbc81473e3ea47dd1d3',
-                },
-                dataType: 'jsonp',
-                jsonp: 'jsoncallback'
-            }).done(function(result) {
-                var linksContainer = $('#links'),
-                    baseUrl;
-                if (result.photos.photo.length > 0) {
-                    $.each(result.photos.photo, function(index,
-                        item) {
-                        baseUrl = 'http://farm' + item.farm +
-                            '.static.flickr.com/' +
-                            item.server + '/' + item.id +
-                            '_' + item.secret;
-                        $('<a/>').append($('<img>').prop(
-                            'src', baseUrl +
-                            '_s.jpg')).prop('href',
-                            baseUrl + '_b.jpg').prop(
-                            'title', item.title).attr(
-                            'data-gallery', '').appendTo(
-                            linksContainer);
-                    });
-                } else {
-                    (
-                        '<p class="lead text-danger"> No photos found to match your search the user ID: ' +
-                        +'.</p>').appendTo(linksContainer);
-                }
-            });
-            $('#image-gallery-button').on('click', function(event) {
-                event.preventDefault();
-                blueimp.Gallery($('#links a'), $(
-                    '#blueimp-gallery').data());
-            });
+
+var filmReview = function(){
+    $('form').submit(function(event){
+        event.preventDefault();
+        var $searchField = $("#searchFilm");
+        var query = $searchField.val();
+        console.log(query);
+        var url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json";
+        var api = "9cced63c6fde5aa51d72ec61a881f5e3:19:71855090"
+
+        url += '?' + $.param({'api-key': api,
+        'query': query,
+        'critics-pick': "N"
         });
-    }
-/* var pictures = function() {
-        $('form').submit(function(event) {
-            event.preventDefault();
-            var apiKey = '9cced63c6fde5aa51d72ec61a881f5e3:19:71855090';
-            var $searchField = $("#search");
-            var url = 'https://api.nytimes.com/svc/movies/v2/reviews/search.json';
-            $.ajax({
-                url: 'https://api.nytimes.com/svc/movies/v2/reviews/search.json',
-                data: {
-                    format: 'json',
-                    method: 'GET',
-                    api_key: '9a204c1e5292bcbc81473e3ea47dd1d3',
-                },
-                dataType: 'jsonp',
-                jsonp: 'jsoncallback'
-            }).done(function(result) {
-                var linksContainer = $('#links'),
-                    baseUrl;
-                if (result.photos.photo.length > 0) {
-                    $.each(result.photos.photo, function(index,
-                        item) {
-                        baseUrl = 'http://farm' + item.farm +
-                            '.static.flickr.com/' +
-                            item.server + '/' + item.id +
-                            '_' + item.secret;
-                        $('<a/>').append($('<img>').prop(
-                            'src', baseUrl +
-                            '_s.jpg')).prop('href',
-                            baseUrl + '_b.jpg').prop(
-                            'title', item.title).attr(
-                            'data-gallery', '').appendTo(
-                            linksContainer);
-                    });
-                } else {
-                    (
-                        '<p class="lead text-danger"> No photos found to match your search the user ID: ' +
-                        +'.</p>').appendTo(linksContainer);
-                }
-            });
-            $('#image-gallery-button').on('click', function(event) {
-                event.preventDefault();
-                blueimp.Gallery($('#links a'), $(
-                    '#blueimp-gallery').data());
-            });
+
+        $.ajax({
+        url: url,
+        method: 'GET',
+            }).done(function(data) {
+            var status = data.status;
+            var copyright = data.copyright;
+            var num_results = data.num_results;
+            var title = data.results[0].display_title;
+            var summary = data.results[0].summary_short
+                console.log(status);
+                console.log(copyright);
+                console.log(num_results);
+                console.log(title);
+                console.log(summary);
+            }).fail(function(err) {
+            throw err;
         });
-    }
-    */
-// end code for today's favorite pics  ////
+        
+    });
+}
+
+filmReview();
+
+
+/* var url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json";
+url += '?' + $.param({
+  'api-key': "9cced63c6fde5aa51d72ec61a881f5e3:19:71855090",
+  'query': "Manhattan night",
+  'critics-pick': "N";
+
+$.ajax({
+  url: url,
+  method: 'GET',
+}).done(function(data) {
+    var status = data.status;
+    var copyright = data.copyright;
+    var num_results = data.num_results;
+    var title = data.results[0].display_title;
+    var summary = data.results[0].summary_short
+    console.log(status);
+    console.log(copyright);
+    console.log(num_results);
+    console.log(title);
+    console.log(summary);
+}).fail(function(err) {
+  throw err;
+});
+
+*/
+
+
