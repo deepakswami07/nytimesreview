@@ -4,7 +4,7 @@ var $homeHTML = " ";
 $homeHTML += '<section id="toFill">';
 $homeHTML += '<article>';
 $homeHTML += '<h1 class="main-header">FILM REVIEW</h1>';
-$homeHTML += '<p id="d-home">Get NYTIMES film review with one click</p>';
+$homeHTML += '<p id="d-home">NYTIMES film review one click away</p>';
 $homeHTML += '</article>';
 
 $homeFormsHTML = " ";
