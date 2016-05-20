@@ -41,14 +41,12 @@
                     <ul class="nav navbar-nav navbar-left">
                         <li><a id="home" href="#" class="selected">HOME</a>
                         </li>
-                        <li><a id="search" href="#" class="selected">REVIEW</a>
+                        <li><a id="reviewer" href="#" class="selected">REVIEWER</a>
                         </li>
-                        <li><a id="userID" href="#" class="selected">CRICTICS' PICK</a>
-                        </li>
-                        <li><a id="favorites" href="#" class="selected">REVIEWER</a>
+                        <li><a id="critics" href="#" class="selected">CRICTICS' PICK</a>
                         </li>
                         </li>
-                        <li><a data-toggle="modal" href="#contact" class="selected">ABOUT</a>
+                        <li><a id="about" data-toggle="modal" href="#contact" class="selected">ABOUT</a>
                         </li>
                     </ul>
                 </div>
@@ -59,10 +57,22 @@
 
    
     <section id="toFill" class="container">
-        <h1 class="main-header">FILMS | BOOKS</h1>
+        <h1 class="main-header">FILM REVIEW</h1>
         <article>
-            <p id="d-home-main">NYT film and book reviews</p>
+            <p id="d-home-main">Get NYTIMES film review with one click</p>
         </article>
+
+            <form class="navbar-form navbar-center form-inline" role="searchFriendsName">
+                <div class="form-group">
+                    <label for="searchFriendsName"></label>
+                        <div class="form-group">
+                            <input type="text" class="form-control" id="searchFriendsName" name="searchFriendsName" placeholder="Type movie name">
+                                <button class="btn btn-info button-style" id="submit" type="submit" value="search">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                        </div>
+                </div>
+            </form>
     </section>
 
     <div id="result"></div>
