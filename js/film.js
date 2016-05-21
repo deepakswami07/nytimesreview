@@ -5,8 +5,6 @@ var filmReview = function(){
         var query = $searchField.val();
         var url = "https://api.nytimes.com/svc/movies/v2/reviews/search.json";
         var api = "9cced63c6fde5aa51d72ec61a881f5e3:19:71855090"
-        var article;
-        var image;
         var monthNames = ["Jan", "Feb", "Mar","Apr", "May", "Jun", "Jul",
                           "Aug", "Sept", "Oct", "Nov", "Dec"];
 
@@ -34,7 +32,6 @@ var filmReview = function(){
                 for (var i = 0; i < data.results.length; i++) {
     
                 /* begin add image properties */
-
                 $('<img id="poster"/>')
                     .attr('src', "" + data.results[i].multimedia.src + "")       
                     .attr('title', data.results[i].display_title)
@@ -60,12 +57,11 @@ var filmReview = function(){
 
                 /* begin opening date check and conversion */
 
-                    var date = new Date();
+                    var date = new Date(data.results[i].opening_date);
                     var day = date.getDate();
                     var monthIndex = date.getMonth();
                     var year = date.getFullYear();
 
-                    console.log(day, monthNames[monthIndex], year);
                     var opening_date;
                         if (data.results[i].opening_date != null){
                             opening_date = day + ' ' + monthNames[monthIndex] + ' ' + year;
@@ -77,6 +73,22 @@ var filmReview = function(){
                     
                 /* end opening date check and conversion */
 
+                /* begin add url */
+                    var reviewUrl = data.results[i].link.url;
+                    var link = $('<a id="review-link">').attr('href', "" + reviewUrl + '>');       
+                    var linkText = data.results[i].link.suggested_link_text;
+                    console.log(reviewUrl);
+                    console.log(linkText);
+                    
+                    var a;
+                    var a = $('< id="link" /a>');
+                    a.append(link);
+                    a.append(linkText);
+                    a.append('#full-review');
+
+                    
+                /* end add url */
+                var article;
                 article = $('<article/>');
                 article.append('<h4 id="title">' +  'Film: ' + data.results[i].display_title + "</h4>");
                 article.append('<h4 id="rating">' +  'Opening: ' + opening_date + "</h4>");
@@ -85,6 +97,8 @@ var filmReview = function(){
                 article.append('<h5 id="headline">' + data.results[i].headline + "</h5>");
                 article.append('<h6 id="author">' + 'Review By: ' + data.results[i].byline + "</h6>");
                 article.append('<p id="summary">' + data.results[i].summary_short + "</p>");
+                article.append('<a id="link" '  + 'href=' + data.results[i].link.url +  " " + 'target=' + "_blank"  + '>' 
+                                + 'Read the full review...' + '</a>' );
                 $('#results').append(article);
                 };
 
