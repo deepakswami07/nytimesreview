@@ -88,6 +88,19 @@ body {
  
 }
 
+#link {
+   font-family:'Montserrat',sans-serif;
+    font-size:1.0em;
+    letter-spacing:2.78px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    text-decoration: none;
+    margin-top:-10px;
+    margin-left:-4px;
+    padding-top: 20px;
+}
+
 /*  end links rules */
 
 
