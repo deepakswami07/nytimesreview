@@ -30,11 +30,7 @@ var filmReview = function(){
                 console.log(data);*/
 
                 for (var i = 0; i < data.results.length; i++) {
-                /*var width = data.results[i].multimedia.width;
-                var height = data.results[i].multimedia.height;
-                 $('<img src="'+ data.results[i].multimedia.src +'">').load(function() {
-                $(this).width(some).height(some).appendTo('#some_target');
-                }); */
+    
 
                 $('<img id="poster"/>')
                     .attr('src', "" + data.results[i].multimedia.src + "")         // ADD IMAGE PROPERTIES.
