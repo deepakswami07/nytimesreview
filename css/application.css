@@ -17,6 +17,80 @@ body {
     -o-background-size:cover
 } */
 
+/* begin links rules */
+
+#summary {
+    font-family:'Lato',sans-serif;
+    font-size:1.0em;
+    text-align:center;
+    color:#F2F2F2;
+    letter-spacing:1.0px;
+    line-height:1.0em;
+    text-align:center;
+    margin-top:-10px;
+    margin-left:-4px;
+    padding: 20px;
+}
+
+#title {
+   font-family:'Montserrat',sans-serif;
+    font-size:1.5em;
+    letter-spacing:2.78px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-4px;
+    padding-top: 20px;
+}
+
+#author {
+   font-family:'Montserrat',sans-serif;
+    font-size:1.0em;
+    letter-spacing:2.78px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-4px;
+    padding-top: 20px;
+}
+
+#headline {
+   font-family:'Montserrat',sans-serif;
+    font-size:1.5em;
+    letter-spacing:2.78px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-4px;
+    padding-top: 20px;
+}
+
+#rating {
+   font-family:'Montserrat',sans-serif;
+    font-size:1.5em;
+    letter-spacing:2.78px;
+    line-height:.64375em;
+    text-align:center;
+    color:#fff;
+    font-weight:300;
+    margin-top:-10px;
+    margin-left:-4px;
+    padding-top: 20px;
+}
+
+#poster {
+ 
+}
+
+/*  end links rules */
+
+
 .deactivated {
   display: : none;
 }
@@ -51,7 +125,7 @@ input:focus::-moz-placeholder {
 input:focus:-ms-input-placeholder {
     color:transparent
 }
-/* begin form focus rules */
+/* end form focus rules */
 /* //////////////////////// */
 
 /*#links.container {
@@ -60,33 +134,17 @@ padding-right: 0px;
 
 }*/
 
-/* ///////////////////////*/
-/* begin signup and login rules */
-li>a,label {
-    position:relative;
-    color:#9d9d9d;
-    text-shadow:0 -1px 0 rgba(0,0,0,.25);
-    display:inline;
-    text-decoration:none;
-    font-family:'Lato',sans-serif;
-    font-size:1em;
-    letter-spacing:.1em;
-    font-weight:700;
-    line-height:145%
-}
-/* ///////////////////////*/
-/* end signup and login rules */
 
 #modal-header>h1 {
   font-family: 'Montserrat',sans-serif;
 }
 /* /////////////////////////////////////////*/
-/* begin headeing and second heading rules */
+/* begin heading and second heading rules */
 
 .main-header {
     font-family:'Montserrat',sans-serif;
     line-height:.1;
-    font-size:3.5em;
+    font-size:2.5em;
     text-align:center;
     color:#D6231E;
     font-weight:700;
@@ -156,67 +214,23 @@ li>a,label {
 
 
 /* /////////////////////////////////////////*/
-/* begin headeing and second heading rules */
+/* begin heading and second heading rules */
 
 
 /* ///////////////////////*/
 /* begin paragraph rules */
-#d-picture {
-    font-family:'Lato',sans-serif;
-    line-height:145%;
-    text-align:center;
-    color:#F2F2F2;
-    width:300px;
-    font-size:1.0em;
-    font-weight:100;
-    margin:20px auto;
-    padding:10px 0 6px;
-    letter-spacing:.2em;
-    text-transform:lowercase;
-    font-variant:small-caps
-}
 
 #d-home {
     font-family:'Lato',sans-serif;
     line-height:145%;
     text-align:center;
     color:#F2F2F2;
-    width:400px;
+    width:250px;
     font-size:1.0em;
     font-weight:100;
     margin:20px auto;
     padding:10px 0 6px;
     letter-spacing:.49em;
-    text-transform:lowercase;
-    font-variant:small-caps
-}
-
-#d-home-main {
-    font-family:'Lato',sans-serif;
-    line-height:145%;
-    text-align:center;
-    color:#F2F2F2;
-    width:400px;
-    font-size:1.0em;
-    font-weight:100;
-    margin:20px auto;
-    padding:10px 0 6px;
-    letter-spacing:.49em;
-    text-transform:lowercase;
-    font-variant:small-caps
-}
-
-#d-search {
-    font-family:'Lato',sans-serif;
-    line-height:145%;
-    text-align:center;
-    color:#F2F2F2;
-    width:300px;
-    font-size:1.0em;
-    font-weight:100;
-    margin:20px auto;
-    padding:10px 0 6px;
-    letter-spacing:.2em;
     text-transform:lowercase;
     font-variant:small-caps
 }
@@ -226,7 +240,7 @@ li>a,label {
     line-height:145%;
     text-align:center;
     color:#F2F2F2;
-    width:300px;
+    width:250px;
     font-size:1.0em;
     font-weight:100;
     margin:20px auto;
@@ -265,6 +279,38 @@ li>a,label {
     text-transform:lowercase;
     font-variant:small-caps
 }
+
+#d-picture {
+    font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:300px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.2em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
+
+#d-home-main {
+    font-family:'Lato',sans-serif;
+    line-height:145%;
+    text-align:center;
+    color:#F2F2F2;
+    width:250px;
+    font-size:1.0em;
+    font-weight:100;
+    margin:20px auto;
+    padding:10px 0 6px;
+    letter-spacing:.49em;
+    text-transform:lowercase;
+    font-variant:small-caps
+}
+
 
 /* ///////////////////////*/
 /* end paragraph rules */
