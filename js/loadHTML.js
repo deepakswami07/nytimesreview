@@ -7,6 +7,7 @@ $homeHTML += '<article>';
 $homeHTML += '<h1 class="main-header">FILM REVIEW</h1>';
 $homeHTML += '<p id="d-home">NYTIMES film review one click away</p>';
 $homeHTML += '</article>';
+$homeHTML += '</section>';
 
 $homeFormsHTML = " ";
 $homeFormsHTML += '<form class="navbar-form navbar-center form-inline" role="searchFilm">';
@@ -59,7 +60,7 @@ var $reviewersHTML = " ";
 $reviewersHTML += '<section>';
 $reviewersHTML += '<h1 class="main-header">REVIEWER</h1>';
 $reviewersHTML += '<article>';
-$reviewersHTML += '<p id="d-favorite">Type in your friend’s userid or username and find their favorite photos.</p>';
+$reviewersHTML += '<p id="d-favorite">Find info about NYTIMES reviewers and the films they have reviewed.</p>';
 $reviewersHTML += '</article>';
 $reviewersHTML += '</section>';
 
@@ -87,7 +88,7 @@ var $aboutHTML = " ";
 $aboutHTML += '<section>';
 $aboutHTML += '<h1 class="main-header">ABOUT</h1>';
 $aboutHTML += '<article>';
-$aboutHTML += '<p id="d-about">Keep your finger on the pulse of the latest picture trends on flickr.  Search for the most interesting pics of the day,search by category, friend’s id or your friend’s favorites.</p>';
+$aboutHTML += '<p id="d-about">Before you head to the movies see what NYTIMES renowned reviewers have to say about this week \'s films</p>';
 $aboutHTML += '</article>';
 $aboutHTML += '</section>';
 
