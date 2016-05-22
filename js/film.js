@@ -1,3 +1,6 @@
+/*////////////////////////////////////////*/
+/* begin search film review -- home page */
+
 var filmReview = function(){
     $('form').submit(function(event){
         event.preventDefault();
@@ -16,21 +19,11 @@ var filmReview = function(){
         $.ajax({
         url: url,
         method: 'GET',
+        cache: false,
             }).done(function(data) {
-            /*var status = data.status;
-            var copyright = data.copyright;
-            var num_results = data.num_results;
-            var title = data.results[0].display_title;
-            var summary = data.results[0].summary_short
-                console.log(status);
-                console.log(copyright);
-                console.log(num_results);
-                console.log(title);
-                console.log(summary);
-                console.log(data);*/
-
                 for (var i = 0; i < data.results.length; i++) {
     
+                /*/////////////////////////////*/
                 /* begin add image properties */
                 $('<img id="poster"/>')
                     .attr('src', "" + data.results[i].multimedia.src + "")       
@@ -40,10 +33,14 @@ var filmReview = function(){
                     .appendTo($('#image'));  
 
                 /* end add image properties */
+                /*/////////////////////////*/
 
 
+                /*///////////////////////////*/
                 /* begin critics pick check */
-
+                    var resultsArray = data.results;
+                    /*console.log(resultsArray.length);
+                    console.log(resultsArray);*/
                     var critics_pick;
                         if (data.results[i].critics_pick > 0){
                             critics_pick = "Yes";
@@ -53,8 +50,9 @@ var filmReview = function(){
                             critics_pick = "No";
                     }
                 /* end critics pick check */
+                /*/////////////////////////////*/
 
-
+                /*//////////////////////////////////////////*/
                 /* begin opening date check and conversion */
 
                     var date = new Date(data.results[i].opening_date);
@@ -72,35 +70,29 @@ var filmReview = function(){
                     }
                     
                 /* end opening date check and conversion */
+                /*//////////////////////////////////////*/
 
+
+                /*////////////////*/
                 /* begin add url */
                     var reviewUrl = data.results[i].link.url;
-                    var link = $('<a id="review-link">').attr('href', "" + reviewUrl + '>');       
-                    var linkText = data.results[i].link.suggested_link_text;
-                    console.log(reviewUrl);
-                    console.log(linkText);
-                    
-                    var a;
-                    var a = $('< id="link" /a>');
-                    a.append(link);
-                    a.append(linkText);
-                    a.append('#full-review');
-
-                    
+    
                 /* end add url */
+                /*////////////*/
+
                 var article;
-                article = $('<article/>');
-                article.append('<h4 id="title">' +  'Film: ' + data.results[i].display_title + "</h4>");
-                article.append('<h4 id="rating">' +  'Opening: ' + opening_date + "</h4>");
-                article.append('<h4 id="rating">' +  'Rating: ' + data.results[i].mpaa_rating + "</h4>");
-                article.append('<h4 id="rating">' +  'Critics Pick: ' + critics_pick + "</h4>");
-                article.append('<h5 id="headline">' + data.results[i].headline + "</h5>");
-                article.append('<h6 id="author">' + 'Review By: ' + data.results[i].byline + "</h6>");
-                article.append('<p id="summary">' + data.results[i].summary_short + "</p>");
-                article.append('<a id="link" '  + 'href=' + data.results[i].link.url +  " " + 'target=' + "_blank"  + '>' 
+                    article = $('<article/>');
+                    article.append('<h4 id="title">' +  'Film: ' + data.results[i].display_title + "</h4>");
+                    article.append('<h4 id="opening">' +  'Opening: ' + opening_date + "</h4>");
+                    article.append('<h4 id="rating">' +  'Rating: ' + data.results[i].mpaa_rating + "</h4>");
+                    article.append('<h4 id="critics-pick">' +  'Critics Pick: ' + critics_pick + "</h4>");
+                    article.append('<h5 id="headline">' + data.results[i].headline + "</h5>");
+                    article.append('<h6 id="author">' + 'Review By: ' + data.results[i].byline + "</h6>");
+                    article.append('<p id="summary">' + data.results[i].summary_short + "</p>");
+                    article.append('<a id="link" '  + 'href=' + reviewUrl +  " " + 'target=' + "_blank"  + '>' 
                                 + 'Read the full review...' + '</a>' );
-                $('#results').append(article);
-                };
+                        $('#results').append(article);
+                    };
 
             }).fail(function(err) {
             throw err;
@@ -109,7 +101,11 @@ var filmReview = function(){
     });
 }
 
-filmReview();
+/*filmReview();
+
+
+/*////////////////////////////////////////*/
+/* begin search film review -- home page */
 
 
 
