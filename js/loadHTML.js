@@ -33,8 +33,8 @@ $criticsHTML += '<form class="navbar-form navbar-center form-inline" role="searc
 $criticsHTML += '<div class="form-group">';
 $criticsHTML += '<label for="searchFriendsID"></label>';
 $criticsHTML += '<div class="form-group">';
-$criticsHTML += '<input type="text" class="form-control" id="searchFriendsID" name="searchFriends" placeholder="xxxxxxxx@Nxx">';
 $criticsHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
+$criticsHTML += '<span>CRITIC\'S PICKS </span>';
 $criticsHTML += '<span class="glyphicon glyphicon-search"></span>';
 $criticsHTML += '</button>';
 $criticsHTML += '</div>';
@@ -42,8 +42,8 @@ $criticsHTML += '</div>';
 $criticsHTML += '</form>';
 $criticsHTML += '</article>';
 $criticsHTML += '</section>';
-//end ajax for userid pics
-///////////////////////////
+//end ajax for userid pics//
+////////////////////////////
 
 
 //////////////////////////////////////
@@ -89,22 +89,18 @@ var $aboutReviewFormHTML = " ";
 // begin append to HTML //
 $("#home").click(function() {
     document.getElementById("toFill").innerHTML = $homeHTML;
-    /*document.getElementById("result").innerHTML = $homeFormsHTML;*/
 }); 
 
 $("#critics").click(function() {
     document.getElementById("toFill").innerHTML = $criticsHTML;
-    /*document.getElementById("result").innerHTML = $homeFormsHTML;*/
 });
 
 $("#reviewer").click(function() {
     document.getElementById("toFill").innerHTML = $reviewersHTML;
-    /*document.getElementById("result").innerHTML = $homeFormsHTML;*/
 });
 
 $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;
-    /*document.getElementById("result").innerHTML = $homeFormsHTML;*/
 });
 //////////////////////////
 // begin append to HTML //
