@@ -31,7 +31,6 @@ var filmReview = function(){
                     .attr('alt', "weiner")
                     .width(data.results[i].multimedia.width).height(data.results[i].multimedia.height)
                     .appendTo($('#image'));  
-
                 /* end add image properties */
                 /*/////////////////////////*/
 
@@ -51,10 +50,10 @@ var filmReview = function(){
                     }
                 /* end critics pick check */
                 /*/////////////////////////////*/
+                
 
                 /*//////////////////////////////////////////*/
                 /* begin opening date check and conversion */
-
                     var date = new Date(data.results[i].opening_date);
                     var day = date.getDate();
                     var monthIndex = date.getMonth();
@@ -68,7 +67,6 @@ var filmReview = function(){
                     {
                             opening_date = "Date Not Announced";
                     }
-                    
                 /* end opening date check and conversion */
                 /*//////////////////////////////////////*/
 
@@ -76,7 +74,6 @@ var filmReview = function(){
                 /*////////////////*/
                 /* begin add url */
                     var reviewUrl = data.results[i].link.url;
-    
                 /* end add url */
                 /*////////////*/
 
@@ -100,12 +97,8 @@ var filmReview = function(){
         });
     });
 }
-
-/* filmReview();
-
-
 /*////////////////////////////////////////*/
-/* begin search film review -- home page */
+/* end search film review -- home page */
 
 
 
