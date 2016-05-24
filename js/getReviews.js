@@ -25,6 +25,7 @@ $("#searchFilm").focus(function() {
 });
 	
 }
+
 loadAll();
 ///////////////////////////////////////////////
 //begin prevent data binding with every search/

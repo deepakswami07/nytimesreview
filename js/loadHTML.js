@@ -25,7 +25,7 @@ $homeHTML += '</section>';
 ////////////////////////////////
 // begin ajax for critics pick//
 var $criticsHTML = " ";
-$criticsHTML += '<section>';
+$criticsHTML += '<section id="toFill">';
 $criticsHTML += '<h1 class="main-header">CRITIC\'S PICK</h1>';
 $criticsHTML += '<article>';
 $criticsHTML += '<p id="d-id">NYTIMES film critics on blockbusters, independents and everything in between</p>';
@@ -49,7 +49,7 @@ $criticsHTML += '</section>';
 //////////////////////////////////////
 // begin ajax for reviewer
 var $reviewersHTML = " ";
-$reviewersHTML += '<section>';
+$reviewersHTML += '<section id="toFill">';
 $reviewersHTML += '<h1 class="main-header">REVIEWER</h1>';
 $reviewersHTML += '<article>';
 $reviewersHTML += '<p id="d-favorite">Find info about NYTIMES reviewers and the films they have reviewed.</p>';
@@ -57,7 +57,7 @@ $reviewersHTML += '<form class="navbar-form navbar-center" role="searchFriendsFa
 $reviewersHTML += '<div class="form-group">';
 $reviewersHTML += '<label for="searchFriendsFav"></label>';
 $reviewersHTML += '<div class="form-group">';
-$reviewersHTML += '<input type="text" class="form-control" id="searchFriendsFav" name="searchFriendsFav" placeholder="username or id">';
+$reviewersHTML += '<input type="text" class="form-control" id="searchFriendsFav" name="searchFriendsFav" placeholder="ex: A.O Scott..">';
 $reviewersHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
 $reviewersHTML += '<span class="glyphicon glyphicon-search"></span>';
 $reviewersHTML += '</button>';
@@ -73,7 +73,7 @@ $reviewersHTML += '</section>';
 ////////////////////////////
 // begin ajax for about HTML
 var $aboutHTML = " ";
-$aboutHTML += '<section>';
+$aboutHTML += '<section id="toFill">';
 $aboutHTML += '<h1 class="main-header">ABOUT</h1>';
 $aboutHTML += '<article>';
 $aboutHTML += '<p id="d-about">Before you head to the movies see what NYTIMES reviewers have to say about this week \'s films</p>';
