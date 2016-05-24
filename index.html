@@ -1,103 +1,128 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!--[if IE]>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<![endif]-->
-   <title>NYTimes Film Review</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    
+    <title>NYTimes Film Review</title>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="With one click find the NYTimes film review of the latest films released">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content=
+    "With one click find the NYTimes film review of the latest films released"
+    name="description">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <!-- <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css"> -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans|Lato:300,400' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="css/demo.css">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/application.css">
+    <link href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"
+    rel="stylesheet">
+    <link href="http://blueimp.github.io/Gallery/css/blueimp-gallery.min.css"
+    rel="stylesheet">
+    <link href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"
+    rel="stylesheet">
+    <link href=
+    'http://fonts.googleapis.com/css?family=Montserrat:700,400|Open+Sans|Lato:300,400'
+    rel='stylesheet' type='text/css'>
+    <link href="css/demo.css" rel="stylesheet">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/application.css" rel="stylesheet">
 </head>
-
 <body>
     <!-- navbar begin -->
     <div class="navbar navbar-default navbar-fixed-top navbar-inverse">
-        <ul class="nav nav-pills pull-right">
-            
-        </ul>
+        <ul class="nav nav-pills pull-right"></ul>
         <!-- <div  class="navbar navbar-inverse navbar-fixed"> -->
-
         <div class="container full masthead pull-left">
             <div class="row-fluid">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-
+                <button class="navbar-toggle" data-target=".navbar-collapse"
+                data-toggle="collapse" type="button"><span class=
+                "icon-bar"></span> <span class="icon-bar"></span> <span class=
+                "icon-bar"></span> <span class="icon-bar"></span></button>
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-left">
-                        <li><a id="home" href="#" class="selected">HOME</a>
-                        </li>
-                        <li><a id="critics" href="#" class="selected">CRICTICS' PICK</a>
-                        </li>
-                        <li><a id="reviewer" href="#" class="selected">REVIEWER</a>
-                        </li>
-                        </li>
-                        <li><a id="about" data-toggle="modal" href="#contact" class="selected">ABOUT</a>
-                        </li>
+                        <li><a class="selected" href="#" id=
+                        "home">HOME</a></li>
+                        <li><a class="selected" href="#" id="critics">CRICTICS'
+                        PICK</a></li>
+                        <li><a class="selected" href="#" id=
+                        "reviewer">REVIEWER</a></li>
+                        <li><a class="selected" data-toggle="modal" href=
+                        "#contact" id="about">ABOUT</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
     <!--  navbar end    -->
 
-   
-    <section id="toFill" class="container">
+
+    <section class="container" id="toFill">
         <h1 class="main-header">FILM REVIEW</h1>
         <article>
             <p id="d-home-main">NYTIMES film review one click away</p>
         </article>
-
-            <form class="navbar-form navbar-center form-inline" role="searchFilm">
+        <form class="navbar-form navbar-center form-inline" role="searchFilm">
+            <div class="form-group">
+                <label for="searchFilm"></label>
                 <div class="form-group">
-                    <label for="searchFilm"></label>
-                        <div class="form-group">
-                            <input type="text" class="form-control" id="searchFilm" name="searchFilm" placeholder="Type movie name">
-                                <button class="btn btn-info button-style" id="submit" type="submit" value="search">
-                                    <span class="glyphicon glyphicon-search"></span>
-                                </button>
-                        </div>
+                    <input class="form-control" id="searchFilm" name=
+                    "searchFilm" placeholder="Type movie name" type="text">
+                    <button class="btn btn-info button-style" id="submit" type=
+                    "submit" value="search"><span class=
+                    "glyphicon glyphicon-search"></span></button>
                 </div>
-            </form>
+            </div>
+        </form>
     </section>
+
+
+    <!-- json object return -->
 
     <section class="container" id="links">
         <article id="image">
-        <img id="poster"/>
+            <img id="poster">
         </article>
         <article id="results"></article>
     </section>
-    
 
-    
+    <!-- json object return -->
+
+
+    <!--  footer begin -->
 
     <footer id="footer">
-        <p class="nav-center" style="text-align:center; color:#D6231E">&copy; 2016 nytimesfilmreview. All rights reserved.</p>
-    </footer>
-    <!--  footer end -->
-    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
-    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/loadHTML.js" type="application/javascript"></script>
-    <script src="js/getReviews.js" type="application/javascript"></script>
-    <script src="js/film.js" type="application/javascript"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-</body>
+        <p class="nav-center" style="text-align:center; color:#D6231E">&copy;
+        2016 nytimesfilmreview. All rights reserved.</p>
 
+    </footer>
+
+    <!--  footer end -->
+
+
+    <!-- scripts begin -->
+
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js">
+    </script> 
+    <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js">
+    </script> 
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js">
+    </script> 
+    <script src=
+    "http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+    </script> 
+    <script src="js/loadHTML.js" type="application/javascript">
+    </script> 
+    <script src="js/getReviews.js" type="application/javascript">
+    </script> 
+    <script src="js/film.js" type="application/javascript">
+    </script> 
+    <script src=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js">
+    </script> 
+
+    <!-- scripts begin -->
+</body>
 </html>

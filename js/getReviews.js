@@ -1,10 +1,13 @@
 /////////////////////////////////////////
 // begin navbar collapse on selection ///
+
 $('.navbar-collapse').click('li', function() {
     $('.navbar-collapse').collapse('hide');
 });
+
 // end navbar collapse on selection ///
 ///////////////////////////////////////
+
 
 ///////////////////////////////////////////////
 //begin prevent data binding with every search/
@@ -17,19 +20,10 @@ $('#searchFilm').focus(function(){
 });
 
 
-
-function checkSearch() {
-
-    $("#searchFilm").focus(function(){
-    if ( $("#links" != null) ) {
-            $("#links").remove();
-        } else {
-           return filmReview();
-        }
-    });
-};
-
- $("#search").click(function() {
-            document.getElementById("links").innerHTML = "";
+ $("#search").focus(function() {
+            document.getElementById("results").innerHTML = " ";
             filmReview();
 });
+
+///////////////////////////////////////////////
+//begin prevent data binding with every search/

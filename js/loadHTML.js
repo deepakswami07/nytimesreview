@@ -1,27 +1,23 @@
 ////////////////////////
 //begin ajax for home//
-
 var $homeHTML = " ";
 $homeHTML += '<section id="toFill">';
 $homeHTML += '<article>';
 $homeHTML += '<h1 class="main-header">FILM REVIEW</h1>';
 $homeHTML += '<p id="d-home">NYTIMES film review one click away</p>';
+$homeHTML += '<form class="navbar-form navbar-center form-inline" role="searchFilm">';
+$homeHTML += '<div class="form-group">';
+$homeHTML += '<label for="searchFilm"></label>';
+$homeHTML += '<div class="form-group">';
+$homeHTML += '<input type="text" class="form-control" id="searchFilm" name="searchFilm" placeholder="Type movie name">';
+$homeHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
+$homeHTML += '<span class="glyphicon glyphicon-search"></span>';
+$homeHTML += '</button>';
+$homeHTML += '</div>';
+$homeHTML += '</div>';
+$homeHTML += '</form>';
 $homeHTML += '</article>';
 $homeHTML += '</section>';
-
-$homeFormsHTML = " ";
-$homeFormsHTML += '<form class="navbar-form navbar-center form-inline" role="searchFilm">';
-$homeFormsHTML += '<div class="form-group">';
-$homeFormsHTML += '<label for="searchFilm"></label>';
-$homeFormsHTML += '<div class="form-group">';
-$homeFormsHTML += '<input type="text" class="form-control" id="searchFilm" name="searchFilm" placeholder="Type movie name">';
-$homeFormsHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
-$homeFormsHTML += '<span class="glyphicon glyphicon-search"></span>';
-$homeFormsHTML += '</button>';
-$homeFormsHTML += '</div>';
-$homeFormsHTML += '</div>';
-$homeFormsHTML += '</form>';
-
 //end ajax for home//
 ////////////////////
 
@@ -33,93 +29,82 @@ $criticsHTML += '<section>';
 $criticsHTML += '<h1 class="main-header">CRITIC\'S PICK</h1>';
 $criticsHTML += '<article>';
 $criticsHTML += '<p id="d-id">NYTIMES film critics on blockbusters, independents and everything in between</p>';
+$criticsHTML += '<form class="navbar-form navbar-center form-inline" role="searchFriends">';
+$criticsHTML += '<div class="form-group">';
+$criticsHTML += '<label for="searchFriendsID"></label>';
+$criticsHTML += '<div class="form-group">';
+$criticsHTML += '<input type="text" class="form-control" id="searchFriendsID" name="searchFriends" placeholder="xxxxxxxx@Nxx">';
+$criticsHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
+$criticsHTML += '<span class="glyphicon glyphicon-search"></span>';
+$criticsHTML += '</button>';
+$criticsHTML += '</div>';
+$criticsHTML += '</div>';
+$criticsHTML += '</form>';
 $criticsHTML += '</article>';
 $criticsHTML += '</section>';
-
-var $criticsFormHTML = " ";
-$criticsFormHTML += '<form class="navbar-form navbar-center form-inline" role="searchFriends">';
-$criticsFormHTML += '<div class="form-group">';
-$criticsFormHTML += '<label for="searchFriendsID"></label>';
-$criticsFormHTML += '<div class="form-group">';
-$criticsFormHTML += '<input type="text" class="form-control" id="searchFriendsID" name="searchFriends" placeholder="xxxxxxxx@Nxx">';
-$criticsFormHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
-$criticsFormHTML += '<span class="glyphicon glyphicon-search"></span>';
-$criticsFormHTML += '</button>';
-$criticsFormHTML += '</div>';
-$criticsFormHTML += '</div>';
-$criticsFormHTML += '</form>';
-
 //end ajax for userid pics
 ///////////////////////////
 
 
 //////////////////////////////////////
 // begin ajax for reviewer
-
 var $reviewersHTML = " ";
 $reviewersHTML += '<section>';
 $reviewersHTML += '<h1 class="main-header">REVIEWER</h1>';
 $reviewersHTML += '<article>';
 $reviewersHTML += '<p id="d-favorite">Find info about NYTIMES reviewers and the films they have reviewed.</p>';
+$reviewersHTML += '<form class="navbar-form navbar-center" role="searchFriendsFav">';
+$reviewersHTML += '<div class="form-group">';
+$reviewersHTML += '<label for="searchFriendsFav"></label>';
+$reviewersHTML += '<div class="form-group">';
+$reviewersHTML += '<input type="text" class="form-control" id="searchFriendsFav" name="searchFriendsFav" placeholder="username or id">';
+$reviewersHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
+$reviewersHTML += '<span class="glyphicon glyphicon-search"></span>';
+$reviewersHTML += '</button>';
+$reviewersHTML += '</div>';
+$reviewersHTML += '</div>';
+$reviewersHTML += '</form>';
 $reviewersHTML += '</article>';
 $reviewersHTML += '</section>';
-
-var $rewiewersFormHTML = " ";
-$rewiewersFormHTML += '<form class="navbar-form navbar-center" role="searchFriendsFav">';
-$rewiewersFormHTML += '<div class="form-group">';
-$rewiewersFormHTML += '<label for="searchFriendsFav"></label>';
-$rewiewersFormHTML += '<div class="form-group">';
-$rewiewersFormHTML += '<input type="text" class="form-control" id="searchFriendsFav" name="searchFriendsFav" placeholder="username or id">';
-$rewiewersFormHTML += ' <button class="btn btn-info button-style" id="submit" type="submit" value="search">';
-$rewiewersFormHTML += '<span class="glyphicon glyphicon-search"></span>';
-$rewiewersFormHTML += '</button>';
-$rewiewersFormHTML += '</div>';
-$rewiewersFormHTML += '</div>';
-$rewiewersFormHTML += '</form>';
-
 // end ajax for reviewer
 ////////////////////////////
 
 
 ////////////////////////////
 // begin ajax for about HTML
-
 var $aboutHTML = " ";
 $aboutHTML += '<section>';
 $aboutHTML += '<h1 class="main-header">ABOUT</h1>';
 $aboutHTML += '<article>';
-$aboutHTML += '<p id="d-about">Before you head to the movies see what NYTIMES renowned reviewers have to say about this week \'s films</p>';
+$aboutHTML += '<p id="d-about">Before you head to the movies see what NYTIMES reviewers have to say about this week \'s films</p>';
 $aboutHTML += '</article>';
 $aboutHTML += '</section>';
 
 var $aboutReviewFormHTML = " ";
-
 // end ajax for about HTML
 ///////////////////////////
 
 
 //////////////////////////
 // begin append to HTML //
-
 $("#home").click(function() {
     document.getElementById("toFill").innerHTML = $homeHTML;
-    document.getElementById("result").innerHTML = $homeFormsHTML;
+    /*document.getElementById("result").innerHTML = $homeFormsHTML;*/
 }); 
 
 $("#critics").click(function() {
     document.getElementById("toFill").innerHTML = $criticsHTML;
-    document.getElementById("result").innerHTML = $criticsFormHTML;
+    /*document.getElementById("result").innerHTML = $homeFormsHTML;*/
 });
 
 $("#reviewer").click(function() {
     document.getElementById("toFill").innerHTML = $reviewersHTML;
-    document.getElementById("result").innerHTML = $rewiewersFormHTML;
+    /*document.getElementById("result").innerHTML = $homeFormsHTML;*/
 });
 
 $("#about").click(function() {
     document.getElementById("toFill").innerHTML = $aboutHTML;
-    document.getElementById("result").innerHTML = $aboutReviewFormHTML;
+    /*document.getElementById("result").innerHTML = $homeFormsHTML;*/
 });
-
 //////////////////////////
 // begin append to HTML //
